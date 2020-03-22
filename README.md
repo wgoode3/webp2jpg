@@ -15,6 +15,6 @@ $ sudo chmod +x /usr/bin/webp2jpg
 Navigate into a folder of your choice
 Run `webp2jpg`
 ```shell
-$ cd ~/home/username/documents/this-folder
+$ cd ~/Documents/this-folder
 $ webp2jpg
 ```
