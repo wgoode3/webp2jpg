@@ -1,4 +1,5 @@
 # webp2jpg
+
 Converts webp images in a folder into jpg
 
 #### Requirements:
@@ -13,6 +14,7 @@ $ sudo chmod +x /usr/bin/webp2jpg
 
 #### Use:
 Navigate into a folder of your choice
+
 Run `webp2jpg`
 ```shell
 $ cd ~/Documents/this-folder
