@@ -7,17 +7,17 @@ def convert_images():
 
     files = [file for file in os.listdir() if os.path.isfile(file)]
 
-    log = ""
+    errors = ""
 
     for file in files:
         try:
             with Image.open(file) as img:
                 if img.format == 'WEBP':
                     img.save(file + '.jpg')
-        except OSError as e:
-            log += str(e) + "\n"
+        except OSError as error:
+            errors += str(error) + "\n"
 
-    print("no errors") if len(log) == 0 else print(log)
+    print("no errors") if len(errors) == 0 else print(errors)
     return 0
 
 convert_images()
