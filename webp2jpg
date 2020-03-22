@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+import os
+from PIL import Image
+
+def convert_images():
+
+    files = [file for file in os.listdir() if os.path.isfile(file)]
+
+    log = ""
+
+    for file in files:
+        try:
+            with Image.open(file) as img:
+                if img.format == 'WEBP':
+                    img.save(file + '.jpg')
+        except OSError as e:
+            log += str(e) + "\n"
+
+    print("no errors") if len(log) == 0 else print(log)
+    return 0
+
+convert_images()
